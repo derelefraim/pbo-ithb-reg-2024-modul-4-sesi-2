@@ -35,6 +35,6 @@ public class Presensi {
 
     @Override
     public String toString() {
-        return "Tanggal: " + tanggal + ", Status: " + status + ", Poin Kehadiran: " + getPoinKehadiran();
+        return "\nTanggal: " + tanggal + "\nStatus: " + status + "\nPoin Kehadiran: " + getPoinKehadiran();
     }
 }

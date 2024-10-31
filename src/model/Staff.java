@@ -3,10 +3,11 @@ package model;
 public abstract class Staff extends User {
     private String nIK;
 
-    public Staff(String nama, String telepon, String alamat, String ttl) {
+    public Staff(String nama, String telepon, String alamat, String ttl, String nIK) {
         super(nama, telepon, alamat, ttl);
+        this.nIK = nIK;
     }
-    
+
     public String getnIK() {
         return nIK;
     }
@@ -17,7 +18,9 @@ public abstract class Staff extends User {
 
     @Override
     public String toString() {
-        return super.toString() + "NIK=" + nIK +  "";
+        return super.toString() + "\nnIK=" + nIK ;
     }
+
+    
     
 }

@@ -22,7 +22,7 @@ public class Sarjana extends Mahasiswa{
 
     @Override
     public String toString() {
-        return super.toString() + "mataKuliah=" + mataKuliah;
+        return super.toString() + "\nmataKuliah=" + mataKuliah;
     }      
     
 }

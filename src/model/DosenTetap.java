@@ -6,10 +6,15 @@ public class DosenTetap extends Dosen {
     
     private double salary;
     
-    public DosenTetap(String nama, String telepon, String alamat, String ttl, String departemen,
+    public DosenTetap(String nama, String telepon, String alamat, String ttl, String nIK, String departemen,
             LinkedList<MatkulAjar> listMataKuliah, double salary) {
-        super(nama, telepon, alamat, ttl, departemen, listMataKuliah);
+        super(nama, telepon, alamat, ttl, nIK, departemen, listMataKuliah);
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nsalary=" + salary;
     }
 
     public double getSalary() {
@@ -20,9 +25,6 @@ public class DosenTetap extends Dosen {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + ", Salary: " + salary;
-    }
+    
 
 }

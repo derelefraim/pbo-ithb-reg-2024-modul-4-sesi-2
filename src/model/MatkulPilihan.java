@@ -19,7 +19,7 @@ public class MatkulPilihan extends MataKuliah {
 
     @Override
     public String toString() {
-        return super.toString() + ", Minimum Mahasiswa: " + minMahasiswa;
+        return super.toString() + "\nMinimum Mahasiswa: " + minMahasiswa;
     }
     
 }

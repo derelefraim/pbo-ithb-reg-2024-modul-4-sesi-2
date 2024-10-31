@@ -6,9 +6,9 @@ public class DosenHonorer extends Dosen {
 
     private double honorPerSKS;
 
-    public DosenHonorer(String nama, String telepon, String alamat, String ttl, String departemen,
+    public DosenHonorer(String nama, String telepon, String alamat, String ttl, String nIK, String departemen,
             LinkedList<MatkulAjar> listMataKuliah, double honorPerSKS) {
-        super(nama, telepon, alamat, ttl, departemen, listMataKuliah);
+        super(nama, telepon, alamat, ttl, nIK, departemen, listMataKuliah);
         this.honorPerSKS = honorPerSKS;
     }
 
@@ -22,7 +22,7 @@ public class DosenHonorer extends Dosen {
 
     @Override
     public String toString() {
-        return super.toString() + ", Honor per SKS: " + honorPerSKS;
+        return super.toString() + "\nhonorPerSKS=" + honorPerSKS;
     }
     
 }

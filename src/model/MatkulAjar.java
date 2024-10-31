@@ -30,6 +30,6 @@ public class MatkulAjar {
 
     @Override
     public String toString() {
-        return super.toString() + "Matkul: " + matkul + ", Presensi Staff: " + presensiStaff;
+        return super.toString() + "\nMatkul: " + matkul + "\nPresensi Staff: " + presensiStaff;
     }
 }

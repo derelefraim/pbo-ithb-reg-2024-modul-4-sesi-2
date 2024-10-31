@@ -6,25 +6,21 @@ public class Karyawan extends Staff {
     
     private double salary;
     private List<PresensiStaff> listPresensiStaff;
-
-    public Karyawan(String nama, String telepon, String alamat, String ttl, double salary, List<PresensiStaff> listPresensiStaff) {
-        super(nama, telepon, alamat, ttl);
+    public Karyawan(String nama, String telepon, String alamat, String ttl, String nIK, double salary,
+            List<PresensiStaff> listPresensiStaff) {
+        super(nama, telepon, alamat, ttl, nIK);
         this.salary = salary;
         this.listPresensiStaff = listPresensiStaff;
     }
-    
     public double getSalary() {
         return salary;
     }
-
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
     public List<PresensiStaff> getListPresensiStaff() {
         return listPresensiStaff;
     }
-
     public void setListPresensiStaff(List<PresensiStaff> listPresensiStaff) {
         this.listPresensiStaff = listPresensiStaff;
     }
@@ -41,6 +37,8 @@ public class Karyawan extends Staff {
 
     @Override
     public String toString() {
-        return super.toString() + ", Salary: " + salary + ", List Presensi Staff: " + listPresensiStaff;
+        return super.toString() + "\nsalary=" + salary + "\nlistPresensiStaff=" + listPresensiStaff;
     }
+
+    
 }

@@ -49,7 +49,7 @@ public class MatkulAmbil {
     }
     @Override
     public String toString() {
-        return super.toString() + "matkul=" + matkul + ", listPresensi=" + listPresensi + ", n1=" + n1 + ", n2=" + n2 + ", n3=" + n3;
+        return super.toString() + "\nmatkul=" + matkul + "\nlistPresensi=" + listPresensi + "\nn1=" + n1 + "\nn2=" + n2 + "\nn3=" + n3;
     }
 
     

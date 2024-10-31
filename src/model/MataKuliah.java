@@ -28,7 +28,7 @@ public class MataKuliah {
     }
     @Override
     public String toString() {
-        return "kode=" + kode + ", nama=" + nama + ", sks=" + sks;
+        return "\nkode=" + kode + "\nnama=" + nama + "\nsks=" + sks;
     }
     
 }

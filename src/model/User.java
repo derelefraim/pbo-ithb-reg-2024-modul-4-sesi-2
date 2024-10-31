@@ -44,7 +44,7 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "nama=" + nama + ", telepon=" + telepon + ", alamat=" + alamat + ", ttl=" + ttl + "";
+        return "nama=" + nama + "\ntelepon=" + telepon + "\nalamat=" + alamat + "\nttl=" + ttl + "";
     }
     
 }

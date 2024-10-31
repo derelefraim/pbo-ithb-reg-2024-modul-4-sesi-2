@@ -26,7 +26,7 @@ public abstract class Mahasiswa extends User{
 
     @Override
     public String toString() {
-        return super.toString() + "NIM=" + nIM + ", jurusan=" + jurusan;
+        return super.toString() + "\nNIM=" + nIM + "\njurusan=" + jurusan;
     }
         
 }
