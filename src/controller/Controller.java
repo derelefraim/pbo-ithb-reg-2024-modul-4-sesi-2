@@ -2,35 +2,13 @@ package controller;
 
 import java.util.List;
 import model.*;
-import controller.Dummy;
 
 public class Controller {
-    private Dummy dataDummy = new Dummy(); 
-    private List<User> listUsers = dataDummy.dummyData();
+    static List<User> listUsers = Dummy.dummyData();
 
-    public Dummy getDataDummy() {
-        return dataDummy;
-    }
-
-    public void setDataDummy(Dummy dataDummy) {
-        this.dataDummy = dataDummy;
-    }
-
-    public List<User> getListUsers() {
-        return listUsers;
-    }
-
-    public void setListUsers(List<User> listUsers) {
-        this.listUsers = listUsers;
-    }
-
-    public Controller(Dummy dataDummy, List<User> listUsers) {
-        this.dataDummy = dataDummy;
-        this.listUsers = listUsers;
-    }
-
-    public String printUserData(String nama) {
+    public static String printUserData(String nama) {
         for (User user : listUsers) {
+            System.out.println(user);
             if (user.getNama().equalsIgnoreCase(nama)) {
                 return user.toString();
             }
@@ -38,7 +16,7 @@ public class Controller {
         return "User tidak ditemukan";
     }
 
-    public String printNilaiAkhir(String NIM, String kodeMK) {
+    public static String printNilaiAkhir(String NIM, String kodeMK) {
         for (User user : listUsers) {
             if (user instanceof Mahasiswa) {
                 Mahasiswa mahasiswa = (Mahasiswa) user;
@@ -62,7 +40,7 @@ public class Controller {
         return "Data tidak ditemukan";
     }
 
-    public String printRataRataNilaiAkhir(String kodeMK) {
+    public static String printRataRataNilaiAkhir(String kodeMK) {
         double totalNilai = 0;
         int jumlahMahasiswa = 0;
 
@@ -93,7 +71,7 @@ public class Controller {
         return "Rata-Rata Nilai Akhir: " + rataRata;
     }
 
-    public String printJumlahTidakLulus(String kodeMK) {
+    public static String printJumlahTidakLulus(String kodeMK) {
         int jumlahTidakLulus = 0;
         int jumlahMahasiswa = 0;
         String namaMK = "";
@@ -127,7 +105,7 @@ public class Controller {
         return "<" + jumlahTidakLulus + "> dari <" + jumlahMahasiswa + "> mahasiswa tidak lulus matakuliah <" + namaMK + ">";
     }
 
-    public String printMatkulDiambilMahasiswa(String NIM) {
+    public static String printMatkulDiambilMahasiswa(String NIM) {
         for (User user : listUsers) {
             if (user instanceof Mahasiswa) {
                 Mahasiswa mahasiswa = (Mahasiswa) user;
@@ -148,7 +126,7 @@ public class Controller {
         return "Mahasiswa tidak ditemukan";
     }
 
-    public String printTotalJamMengajar(String nIK) {
+    public static String printTotalJamMengajar(String nIK) {
         for (User user : listUsers) {
             if (user instanceof Dosen) {
                 Dosen dosen = (Dosen) user;
@@ -168,7 +146,7 @@ public class Controller {
         return "Dosen tidak ditemukan";
     }
 
-    public String printGaji(String nIK) {
+    public static String printGaji(String nIK) {
         for (User user : listUsers) {
             if (user instanceof Karyawan) {
                 Karyawan karyawan = (Karyawan) user;

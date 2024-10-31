@@ -8,7 +8,7 @@ import model.*;
 
 public class Dummy {
 
-    public List<User> dummyData() {
+    public static List<User> dummyData() {
         List<User> userList = new ArrayList<>();
 
         // MataKuliah instance

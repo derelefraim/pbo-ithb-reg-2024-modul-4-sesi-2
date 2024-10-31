@@ -5,12 +5,6 @@ import controller.Controller;
 
 public class View {
 
-    private static Controller controller;
-
-    public View(Controller controller) {
-        View.controller = controller;
-    }
-
     public static void showMenu() {
         boolean running = true;
         String menu = "1. Print UserData\n" +
@@ -82,7 +76,7 @@ public class View {
     private static void printUserData() {
         String nama = getInput("Masukkan Nama:");
         if (nama != null) {
-            showMessage(controller.printUserData(nama));
+            showMessage(Controller.printUserData(nama));
         }
     }
 
@@ -91,7 +85,7 @@ public class View {
         if (NIM != null) {
             String kodeMK = getInput("Masukkan Kode Mata Kuliah:");
             if (kodeMK != null) {
-                showMessage(controller.printNilaiAkhir(NIM, kodeMK));
+                showMessage(Controller.printNilaiAkhir(NIM, kodeMK));
             }
         }
     }
@@ -99,35 +93,35 @@ public class View {
     private static void printRataRataNilaiAkhir() {
         String kodeMK = getInput("Masukkan Kode Mata Kuliah:");
         if (kodeMK != null) {
-            showMessage(controller.printRataRataNilaiAkhir(kodeMK));
+            showMessage(Controller.printRataRataNilaiAkhir(kodeMK));
         }
     }
 
     private static void printJumlahTidakLulus() {
         String kodeMK = getInput("Masukkan Kode Mata Kuliah:");
         if (kodeMK != null) {
-            showMessage(controller.printJumlahTidakLulus(kodeMK));
+            showMessage(Controller.printJumlahTidakLulus(kodeMK));
         }
     }
 
     private static void printMatkulDiambilMahasiswa() {
         String NIM = getInput("Masukkan NIM:");
         if (NIM != null) {
-            showMessage(controller.printMatkulDiambilMahasiswa(NIM));
+            showMessage(Controller.printMatkulDiambilMahasiswa(NIM));
         }
     }
 
     private static void printTotalJamMengajar() {
         String NIK = getInput("Masukkan NIK Dosen:");
         if (NIK != null) {
-            showMessage(controller.printTotalJamMengajar(NIK));
+            showMessage(Controller.printTotalJamMengajar(NIK));
         }
     }
 
     private static void printGaji() {
         String NIK = getInput("Masukkan NIK Staff:");
         if (NIK != null) {
-            showMessage(controller.printGaji(NIK));
+            showMessage(Controller.printGaji(NIK));
         }
     }
 }
