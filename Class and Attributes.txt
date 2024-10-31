@@ -1,0 +1,40 @@
+User : 
+	String Nama 
+	String telepon 
+	String alamat, 
+	String ttl
+MataKuliah : 
+	String kode
+	String nama
+	String sks
+Presensi : 
+	String tanggal
+	String status
+
+
+Mahasiswa extends User : 
+	String nim
+	String jurusan
+Staff extends User :
+	String nik
+
+Sarjana extends Mahasiswa :
+	LinkedList <MataKuliah> mataKuliah
+Doktor extends Mahasiswa
+	String judulPenelitianDisertasi;
+   	int nilaiSidang1;
+    	int nilaiSidang2;
+   	int nilaiSidang3;
+
+ 
+
+
+
+Dosen extends Mahasiswa : 
+String departemen
+LinkedList<MatkulAjar> listMataKuliah
+
+
+
+
+
